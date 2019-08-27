@@ -1,0 +1,33 @@
+<mat-card class="list-content" id="{{ uid }}">
+  <div class="widget-action">
+    <button mat-icon-button class="md-icon-button md-button" matTooltip="Open {{ title }} menu" matTooltipPosition="above" attr.aria-label="Open {{ title }} menu" [matMenuTriggerFor]="menu">
+      <mat-icon style="font-size:18px">more_vert</mat-icon>
+    </button>
+  </div>
+
+  <span class="content-wrapper" (click)="handleCardClick()">
+    <div class="title-container">
+      <h4>{{ title }}</h4>
+    </div>
+    <div class="icon-container">
+      <mat-icon *ngIf="svgIconUrl" class="widget-icon" svgIcon="customSvgIcon"></mat-icon>
+      <mat-icon *ngIf="mdIcon" class="widget-icon">{{ mdIcon }}</mat-icon>
+      <fa-icon *ngIf="faIcon" [classes]="['widget-icon']" [icon]="['fas', faIcon]"></fa-icon>
+    </div>
+  </span>
+  <myuw-launch-button
+    buttonText="{{ buttonText }}"
+    url="{{ url }}"
+    class="launch-button"
+  >
+  </myuw-launch-button>
+</mat-card>
+
+<!-- Menu -->
+<mat-menu #menu="matMenu" class="custom-menu-panel">
+  <!-- Remove widget button -->
+  <button mat-menu-item class="menu-item" (click)="handleCardDelete()">
+    <mat-icon>delete</mat-icon>
+    Remove from home
+  </button>
+</mat-menu>
