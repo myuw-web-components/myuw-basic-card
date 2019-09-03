@@ -15,11 +15,9 @@
       <fa-icon *ngIf="faIcon" [classes]="['widget-icon']" [icon]="['fas', faIcon]"></fa-icon>
     </div>
   </span>
-  <myuw-launch-button
-    [attr.url]="url"
-    class="launch-button"
-  >
-  </myuw-launch-button>
+  <span id="launch-button" class="launch-app-button" (click)="handleButtonClick()">
+    {{ buttonText }}
+  </span>
 </mat-card>
 
 <!-- Menu -->
