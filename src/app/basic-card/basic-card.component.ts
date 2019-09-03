@@ -57,6 +57,19 @@ export class BasicCardComponent {
   }
 
   /**
+   * When launch buton is clicked if external link open in new tab, if relative
+   * link then open in same tab.
+   */
+  handleButtonClick() {
+    var reg = new RegExp('^http(s)?');
+    if(reg.test(this.url)) {
+      window.open(this.url, "_blank");
+    } else {
+      this.document.location.href = this.url;
+    }
+  }
+
+  /**
     * Go to given link when card is clicked. If url starts with http(s) open
     * link in new tab.
    */
