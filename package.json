@@ -43,9 +43,9 @@
     "typescript": "3.5.3",
     "webpack-bundle-analyzer": "^3.4.1"
   },
-  "name": "@myuw-web-components/myuw-compact-card",
-  "description": "A compact card for MyUW",
-  "version": "1.0.6",
+  "name": "@myuw-web-components/myuw-basic-card",
+  "description": "A basic card for MyUW",
+  "version": "1.0.0",
   "main": "element/element.js",
   "files": [
     "element"
@@ -54,10 +54,10 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/myuw-web-components/myuw-compact-card.git"
+    "url": "git+https://github.com/myuw-web-components/myuw-basic-card.git"
   },
   "bugs": {
-    "url": "https://github.com/myuw-web-components/myuw-compact-card/issues"
+    "url": "https://github.com/myuw-web-components/myuw-basic-card/issues"
   },
-  "homepage": "https://github.com/myuw-web-components/myuw-compact-card#readme"
+  "homepage": "https://github.com/myuw-web-components/myuw-basic-card#readme"
 }
